@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getBlogDetail } from "../../lib/getBlogDetail";
+
+export function getStaticPaths() {
+  return [{ params: { blogId: "test.md" } }, { params: { blogId: "hoge.md" } }];
+}
+
+const { blogId } = Astro.params;
+const { data, content } = await getBlogDetail(blogId);
+---
+
+<Layout title={data.title ?? "not found"}>
+  <h1>{data.title ?? "not found"}</h1>
+  <div set:html={content} />
+</Layout>
+
+<style>
+  div {
+    margin-top: 20px;
+    color: #fff;
+    h1 {
+      font-size: 24px;
+    }
+  }
+</style>

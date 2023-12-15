@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const getBlogs = async () => {
+  const res = await fetch(
+    "https://api.github.com/repos/umaidashi/blog/contents/contents/posts",
+  );
+  const data = await res.json();
+  return data;
+};
+const blogs = await getBlogs();
+---
+
+<Layout title="blogs">
+  <h1>blogs</h1>
+  {
+    blogs.map((blog) => (
+      <div>
+        <a href={`/blog/${blog.name}`}>{blog.name}</a>
+      </div>
+    ))
+  }
+</Layout>
+
+<style>
+  a {
+    display: block;
+    color: #fff;
+  }
+</style>
