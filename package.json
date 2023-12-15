@@ -12,6 +12,15 @@
   "dependencies": {
     "@astrojs/check": "^0.3.2",
     "astro": "^4.0.4",
+    "gray-matter": "^4.0.3",
+    "marked": "^11.1.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-astro": "^0.31.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.2"
   }
 }
