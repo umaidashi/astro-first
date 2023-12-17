@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",
+    "@sfroment/astro-stylex": "^0.0.9",
+    "@stylexjs/stylex": "0.2.0-beta.27",
     "astro": "^4.0.4",
+    "astro-stylex": "^0.1.1",
     "gray-matter": "^4.0.3",
     "marked": "^11.1.0",
     "typescript": "^5.3.3"
