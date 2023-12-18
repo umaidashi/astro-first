@@ -14,7 +14,7 @@ const blogs = await getBlogs();
 <Layout title="blogs">
   <h1>blogs</h1>
   {
-    blogs.map((blog: any) => (
+    blogs.map((blog: {name: string}) => (
       <div>
         <a href={`/blog/${blog.name}`}>{blog.name}</a>
       </div>
